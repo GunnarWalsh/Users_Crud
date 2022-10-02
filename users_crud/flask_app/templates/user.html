@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .home_link{
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>User #{{ return_user.id }}</h2>
+        <a href="/users/show" class="home_link">Home</a>
+    </div>
+    
+    <p>Full Name: {{ return_user.first_name }} {{ return_user.last_name }}</p>
+    <p>Email: {{ return_user.email }}</p>
+    <a href="/user/{{ return_user.id }}/edit">Edit</a> <a href="/user/{{ return_user.id }}/del_from_db">Delete User</a>
+</body>
+</html>
